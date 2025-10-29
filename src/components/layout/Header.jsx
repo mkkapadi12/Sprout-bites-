@@ -60,9 +60,11 @@ const Header = () => {
             </nav>
 
             {/* Contact Button (Desktop) */}
-            <button className="hidden md:block bg-[#F59E0B] text-white px-6 py-2 rounded-full font-semibold hover:bg-[#d97706] transition">
-              Contact Us
-            </button>
+            <Link to="/contact">
+              <button className="hidden md:block bg-[#F59E0B] text-white px-6 py-2 rounded-full font-semibold hover:bg-[#d97706] transition">
+                Contact Us
+              </button>
+            </Link>
 
             {/* Mobile Menu Button */}
             <button

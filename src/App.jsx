@@ -16,6 +16,8 @@ import NotFound from "./pages/NotFound";
 import Home from "./pages/Home";
 import Menu from "./pages/Menu";
 import About from "./pages/AboutUs";
+import Blog from "./pages/Blog";
+import Contact from "./pages/Contact";
 
 const App = () => {
   return (
@@ -25,6 +27,8 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/menu" element={<Menu />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/contact" element={<Contact />} />
 
           {/* 404 Not Found */}
           <Route path="/404" element={<NotFound />} />
