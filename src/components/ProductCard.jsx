@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import { Heart, Star } from "lucide-react";
-import { useState } from "react";
+import menuitem from "../assets/menuitem.png";
 
 export function ProductCard({
   id,
@@ -15,13 +15,13 @@ export function ProductCard({
   const [isFavorite, setIsFavorite] = useState(false);
 
   return (
-    <div className="bg-white rounded-xl shadow-md hover:shadow-lg transition overflow-hidden">
+    <div className="overflow-hidden">
       {/* Image Container */}
-      <div className="relative h-48 bg-gray-100 overflow-hidden">
+      <div className="relative flex items-center justify-center top-12">
         <img
-          src={image || "/placeholder.svg"}
+          src={menuitem}
           alt={name}
-          className="w-full h-full object-cover hover:scale-105 transition duration-300"
+          className="w-[85%] h-full object-cover rotate-[65deg]"
         />
         {badge && (
           <div
@@ -31,13 +31,13 @@ export function ProductCard({
           </div>
         )}
         {/* Favorite Badge */}
-        <div className="absolute bottom-3 right-3 bg-[#f59e0b] text-white rounded-full p-2 w-10 h-10 flex items-center justify-center">
-          <span className="text-sm font-bold">50</span>
+        <div className="absolute  bottom-6 right-16 bg-[#f59e0b] text-white rounded-full p-2 w-16 h-16 flex items-center justify-center">
+          <span className="text-xl font-bold">50</span>
         </div>
       </div>
 
       {/* Content */}
-      <div className="p-4">
+      <div className="px-4 bg-[#f9f9f9] py-12 rounded-xl">
         <h3 className="font-bold text-lg text-[#2d5016] mb-2">{name}</h3>
 
         {/* Rating */}

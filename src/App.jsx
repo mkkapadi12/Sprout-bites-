@@ -14,6 +14,8 @@ import Layout from "./components/layout";
 //pages
 import NotFound from "./pages/NotFound";
 import Home from "./pages/Home";
+import Menu from "./pages/Menu";
+import About from "./pages/AboutUs";
 
 const App = () => {
   return (
@@ -21,6 +23,8 @@ const App = () => {
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/menu" element={<Menu />} />
 
           {/* 404 Not Found */}
           <Route path="/404" element={<NotFound />} />

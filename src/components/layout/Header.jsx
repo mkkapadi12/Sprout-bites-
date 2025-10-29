@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import logo from "../../assets/logo.png";
+import whitelogo from "../../assets/white-logo.png";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -80,9 +81,9 @@ const Header = () => {
           {/* Close Button */}
           <div className="flex justify-between items-center p-4 border-b border-white/20">
             <img
-              src={logo}
+              src={whitelogo}
               alt="Sprout Bites"
-              className="w-[92px] h-[72px] object-contain invert"
+              className="w-[92px] h-[72px] object-contain"
             />
             <button onClick={() => setMenuOpen(false)}>
               <X size={28} />
